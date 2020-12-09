@@ -502,6 +502,17 @@
     </a>
   </div>
 
+  <app-item [item]='currentItem' (newItemEvent)=addItem($event)></app-item>
+  <div>
+  <ul>
+    <li *ngFor="let item of items">{{item}}</li>
+  </ul>
+</div>
+
+<div>
+  <label>What is it ?: <input #newCurrentItem></label><br />
+<button (click)="newValueCurrentItem(newCurrentItem.value)">Change newCurrentItem</button><br />
+</div>
   <!-- Footer -->
   <footer>
       Love Angular?&nbsp;
